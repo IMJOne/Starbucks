@@ -91,6 +91,36 @@ if (loginForm) {
   });
 }
 
+// Rewards filtering
+const starLevel = document.querySelector('.star__level');
+const underline = document.querySelector('.underline');
+
+if (starLevel) {
+  starLevel.addEventListener('click', e => {
+    const levelActive = document.querySelector('.level__btn.active');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+
+    // 클릭한 버튼 active
+    levelActive.classList.remove('active');
+    target.classList.add('active');
+    underline.style.left = `${target.offsetLeft}px`;
+
+    // 클릭한 등급의 혜택 상세 내용만 필터링해서 보여줌
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    const articleOfbenefits = document.querySelectorAll('.star__benefits');
+
+    articleOfbenefits.forEach(article => {
+      if (filter === null) {
+        reutrn;
+      } else if (filter === article.dataset.level) {
+        article.style.opacity = 1;
+      } else {
+        article.style.opacity = 0;
+      }
+    });
+  });
+}
+
 // Show arrow up btn
 document.addEventListener('scroll', () => {
   if (window.scrollY > 500) {
