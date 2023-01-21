@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타벅스 커피 | Starbucks Korea</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+
+    <!-- Google font & Fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f506734a62.js"></script>
+
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Stylesheet & Script -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/map.js"></script>
+
+    <!-- Google Maps API -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRpG82DtSjhyvGPLr1bu_CEAeGJOnjEO0&libraries=places&callback=initMap&region=kr"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div id="container">
+      <!-- Dark -->
+      <div class="dark"></div>
+
+      <!-- Header -->
+      <header>
+        <i class="header__backward fa-solid fa-chevron-left"></i>
+        <h1 class="header__logo"><a href="index.html">STARBUCKS</a></h1>
+        <div class="header__icons">
+          <a href="login.html"><i class="header__user fa-solid fa-user-large"></i></a>
+          <i class="header__trigger fa-solid fa-bars"></i>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav>
+        <i class="nav__close fa-solid fa-xmark"></i>
+        <ul class="navbar">
+          <li class="navbar__menu"><a class="navbar__menu__items" href="index.html">HOME</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="coffee.html">COFFEE</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="menu.html">MENU</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="rewards.html">REWARDS</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="card.html">CARD</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sub header -->
+      <div class="sub-header">
+        <img class="sub-header__logo" src="img/logo_dark.png" alt="스타벅스 로고" />
+      </div>
+
+      <!-- Main -->
+      <main>
+        <!-- Reserve -->
+        <section id="coffee" class="fixing">
+          <article id="reserve" data-aos="fade-down">
+            <h2>STARBUCKS COFFEE</h2>
+            <div class="reserve__content">
+              <img class="reserve__title" src="img/coffee/reserve/title.jpg" alt="스타벅스 리저브™" />
+              <strong class="reserve__introduce" data-aos="fade-up" data-aos-delay="300">단일 원산지 원두를 사용한 프리미엄 커피</strong>
+              <p class="reserve__description" data-aos="fade-up" data-aos-delay="500">
+                최고의 커피를 찾기 위해 세계를 여행하는 스타벅스가<br />
+                진귀하고 이국적인 최상급 프리미엄 커피를 소개합니다.<br />
+                단일 원산지에서 극소량만 재배되는 리저브 커피는<br />
+                전 세계에서 약 800개의 지정된 매장에서만 제공되며,<br />
+                매 시즌마다 새로운 커피들이 주기적으로 소개됩니다.<br />
+                스타벅스 리저브™ 매장에 방문하여 리저브 커피와 함께<br />
+                잊을 수 없는 특별한 순간을 경험해보세요!
+              </p>
+              <img src="img/coffee/reserve/bean.png" alt="" data-aos="fade-up" data-aos-delay="700" />
+              <button class="reserve__store">전국의 스타벅스 리저브 매장을 확인해 보세요!</button>
+            </div>
+          </article>
+
+          <!-- Brewing -->
+          <article id="brewing">
+            <h3 class="brewing__title" data-aos="fade-up">
+              <span>★</span><br />
+              <span>더욱 다양한 추출 방식</span>으로<br />
+              만나볼 수 있는 리저브
+            </h3>
+            <p class="brewing__description" data-aos="fade-up">
+              다양한 추출 방식으로 리저브를 즐길 수 있습니다.<br />
+              추출 방식에 따라 색다른 리저브로<br />
+              여러분의 커피 경험을 완성해보세요.
+            </p>
+            <ul class="brewing__method">
+              <li class="method" data-aos="fade-up">
+                <img src="img/coffee/reserve/reserve_pourover.png" alt="POUR OVER" />
+                <div class="method__detail">
+                  <strong class="method__name">POUR OVER</strong>
+                  <p class="method__description">
+                    풍부한 커피향과<br />
+                    균형 잡힌 풍미를 느끼고 싶다면
+                  </p>
+                </div>
+              </li>
+              <li class="method" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/coffee/reserve/reserve_blackeagle.png" alt="POUR OVER" />
+                <div class="method__detail">
+                  <strong class="method__name">BLACK EAGLE</strong>
+                  <p class="method__description">
+                    진하고 깊은 에스프레소 풍미를<br />
+                    다채롭게 즐기고 싶다면
+                  </p>
+                </div>
+              </li>
+              <li class="method" data-aos="fade-up">
+                <img src="img/coffee/reserve/reserve_clover.png" alt="POUR OVER" />
+                <div class="method__detail">
+                  <strong class="method__name">CLOVER</strong>
+                  <p class="method__description">
+                    깊은 풍미에<br />
+                    진하고 강렬한 맛을 원한다면
+                  </p>
+                </div>
+              </li>
+              <li class="method" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/coffee/reserve/reserve_coldbrew.png" alt="POUR OVER" />
+                <div class="method__detail">
+                  <strong class="method__name">COLD BREW</strong>
+                  <p class="method__description">
+                    달콤함과 부드러운 풍미를<br />
+                    동시에 느끼고 싶다면
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Product -->
+          <article id="product">
+            <span class="product__title">Now Brewing 판매 중인 스타벅스 리저브™ 원두 </span>
+            <ul class="product_beans">
+              <li class="beans" data-aos="fade-up">
+                <img src="img/coffee/reserve/bean1.jpg" alt="스타벅스 리저브 크리스마스 원두" class="beans__photo" />
+                <div class="beans__detail">
+                  <img src="img/coffee/reserve/reserve_icon.png" alt="스타벅스 리저브 아이콘 이미지" class="beans__icon" />
+                  <p class="beans__name">크리스마스</p>
+                </div>
+              </li>
+              <li class="beans" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/coffee/reserve/bean2.jpg" alt="스타벅스 리저브 수마트라 크린치 원두" class="beans__photo" />
+                <div class="beans__detail">
+                  <img src="img/coffee/reserve/reserve_icon.png" alt="스타벅스 리저브 아이콘 이미지" class="beans__icon" />
+                  <p class="beans__name">수마트라 크린치</p>
+                </div>
+              </li>
+              <li class="beans" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/coffee/reserve/bean3.jpg" alt="스타벅스 리저브 르완다 쇼리 원두" class="beans__photo" />
+                <div class="beans__detail">
+                  <img src="img/coffee/reserve/reserve_icon.png" alt="스타벅스 리저브 아이콘 이미지" class="beans__icon" />
+                  <p class="beans__name">르완다 쇼리</p>
+                </div>
+              </li>
+              <li class="beans" data-aos="fade-up" data-aos-delay="400">
+                <img src="img/coffee/reserve/bean4.jpg" alt="스타벅스 리저브 웨스트 자바 원두" class="beans__photo" />
+                <div class="beans__detail">
+                  <img src="img/coffee/reserve/reserve_icon.png" alt="스타벅스 리저브 아이콘 이미지" class="beans__icon" />
+                  <p class="beans__name">웨스트 자바</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Espresso -->
+          <article id="espresso">
+            <h3 data-aos="fade-up">에스프레소 음료</h3>
+            <p class="espresso__description" data-aos="fade-up">
+              순수하고 강렬한 에스프레소 풍미의 도피오,<br />
+              완벽하게 만들어진 부드러운 크림 블렌드의 라떼 등<br />
+              에스프레소로 즐길 수 있는 음료들을 만나보세요.
+            </p>
+            <div class="espresso__recipe" data-aos="fade-up">
+              <div class="recipe" data-aos="fade-up">
+                <img src="img/coffee/esspresso/color_espresso.png" alt="에스프레소" class="recipe__color" />
+                <p class="recipe__name">에스프레소</p>
+              </div>
+              <div class="recipe" data-aos="fade-up" data-aos-delay="300">
+                <img src="img/coffee/esspresso/color_water.png" alt="물" class="recipe__color" />
+                <p class="recipe__name">물</p>
+              </div>
+              <div class="recipe" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/coffee/esspresso/color_milkfoam.png" alt="우유 거품" class="recipe__color" />
+                <p class="recipe__name">우유 거품</p>
+              </div>
+              <div class="recipe" data-aos="fade-up" data-aos-delay="700">
+                <img src="img/coffee/esspresso/color_steamdmilk.png" alt="스팀 밀크" class="recipe__color" />
+                <p class="recipe__name">스팀 밀크</p>
+              </div>
+            </div>
+            <ul class="espresso__drink">
+              <li class="drink" data-aos="flip-up" data-aos-delay="300">
+                <h4 class="drink__name">도피오</h4>
+                <img src="img/coffee/esspresso/doppio.png" alt="에스프레소 음료 도피오" class="drink__photo" />
+                <p class="drink__description">
+                  도피오는 에스프레소를 2샷으로 추출한 음료입니다.<br />
+                  스타벅스 음료의 가장 핵심이자 중요한 에스프레소입니다.
+                </p>
+              </li>
+              <li class="drink" data-aos="flip-down">
+                <h4 class="drink__name">아메리카노</h4>
+                <img src="img/coffee/esspresso/americano.png" alt="에스프레소 음료 아메리카노" class="drink__photo" />
+                <p class="drink__description">
+                  에스프레소에 뜨거운 물을 부어 만든 아메리카노는<br />
+                  진한 풍미와 원두의 다크한 맛을 느낄 수 있습니다.
+                </p>
+              </li>
+              <li class="drink" data-aos="flip-up">
+                <h4 class="drink__name">라떼</h4>
+                <img src="img/coffee/esspresso/latte.png" alt="에스프레소 음료 라떼" class="drink__photo" />
+                <p class="drink__description">
+                  진한 에스프레소와 부드러운 스팀 밀크가 섞인 라떼는<br />
+                  더하고자 하는 어떠한 맛과도 잘 어울리는 음료입니다.
+                </p>
+              </li>
+              <li class="drink" data-aos="flip-down">
+                <h4 class="drink__name">카푸치노</h4>
+                <img src="img/coffee/esspresso/cappuccino.png" alt="에스프레소 음료 카푸치노" class="drink__photo" />
+                <p class="drink__description">
+                  두텁게 쌓은 우유거품 아래에 다크하고 진한 에스프레소가<br />
+                  숨어진 카푸치노, 바리스타의 숙련된 솜씨를 느껴보세요.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Story -->
+          <article id="story">
+            <div class="story__title">
+              <h3 data-aos="fade-up">커피 이야기</h3>
+              <h4 data-aos="fade-up" data-aos-delay="300">"커피 이상의 특별한 경험을 선사합니다."</h4>
+            </div>
+            <ol class="story__list" data-aos="fade-up" data-aos-delay="500">
+              <li class="story">
+                <strong class="story__order">① 스타벅스만의 지속가능한 커피 생산</strong>
+                <p class="story__detail">스타벅스 커피는 각 산지의 커피가 가지고 있는 최상의 풍미와 더불어 산지의 농부와 스타벅스의 노력이 고스란히 담겨있습니다.</p>
+              </li>
+              <li class="story">
+                <strong class="story__order">② 스타벅스만의 윤리적인 커피 구매</strong>
+                <p class="story__detail">스타벅스 커피 전문가는 농부들과의 지속적인 협업을 통해 매년 고품질의 커피를 생산하고, 윤리적인 구매 활동을 지속합니다.</p>
+              </li>
+              <li class="story">
+                <strong class="story__order">③ 엄격한 비율로 완성된 블렌드</strong>
+                <p class="story__detail">생두 본연의 풍미를 최대한 발현시킨 커피 한 잔을 위해, 풍부한 경험을 가진 스타벅스 팀에서 각각의 블렌드를 제조합니다.</p>
+              </li>
+            </ol>
+          </article>
+        </section>
+
+        <!-- Map -->
+        <div class="store__map">
+          <i class="map__close-btn fa-solid fa-xmark"></i>
+          <div class="map__banner">
+            <img src="img/coffee/reserve/reserve_icon_brown.png" alt="스타벅스 리저브 아이콘" class="banner__icon" />
+            <p class="map__banner__title">
+              <strong>Starbucks Reserve™ Store</strong>
+              전국의 스타벅스 리저브 매장을 확인해보세요!
+            </p>
+          </div>
+          <div id="map"></div>
+        </div>
+      </main>
+
+      <!-- Arrow up -->
+      <i class="btn__arrow-up fa-solid fa-arrow-up"></i>
+
+      <!-- Footer -->
+      <footer>
+        <img class="footer__logo" src="img/logo.png" alt="" />
+        <div class="footer__info">
+          <ul class="footer__terms">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">홈페이지 이용약관</a></li>
+            <li><a href="#">스타벅스 카드 이용약관</a></li>
+          </ul>
+          <address class="footer__address">
+            사업자등록번호 : 201-81-21515<br />
+            주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭<br />
+            TEL : 1522-3232<br />
+            개인정보 책임자 : 이현수
+          </address>
+          <p class="footer__reserve">ⓒ 2022 Starbucks Coffee Company - All Rights Reserved.</p>
+        </div>
+        <ul class="footer__sns">
+          <li class="sns">
+            <a href="https://www.instagram.com/starbuckskorea/?hl=ko"><img src="img/footer/instagram.png" alt="인스타그램" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://www.youtube.com/user/starbuckskorea"><img src="img/footer/youtube.png" alt="유튜브" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://ko-kr.facebook.com/starbuckskorea/"><img src="img/footer/facebook.png" alt="페이스북" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://twitter.com/StarbucksKorea"><img src="img/footer/twitter.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

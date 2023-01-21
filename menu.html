@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타벅스 메뉴 | Starbucks Korea</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+
+    <!-- Google font & Fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f506734a62.js"></script>
+
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/menu.js"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div id="container">
+      <!-- Dark -->
+      <div class="dark"></div>
+
+      <!-- Header -->
+      <header>
+        <i class="header__backward fa-solid fa-chevron-left"></i>
+        <h1 class="header__logo"><a href="index.html">STARBUCKS</a></h1>
+        <div class="header__icons">
+          <a href="login.html"><i class="header__user fa-solid fa-user-large"></i></a>
+          <i class="header__trigger fa-solid fa-bars"></i>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav>
+        <i class="nav__close fa-solid fa-xmark"></i>
+        <ul class="navbar">
+          <li class="navbar__menu"><a class="navbar__menu__items" href="index.html">HOME</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="coffee.html">COFFEE</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="menu.html">MENU</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="rewards.html">REWARDS</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="card.html">CARD</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sub header -->
+      <div class="sub-header">
+        <img class="sub-header__logo" src="img/logo_dark.png" alt="스타벅스 로고" />
+      </div>
+
+      <!-- Main -->
+      <main>
+        <section id="menu" data-aos="fade-down">
+          <div class="menu__title">
+            <h2>STARBUCKS MENU</h2>
+            <p class="menu__title__introduce">
+              바리스타의 숙련된 기술에 고객별 취향까지 담은 음료와<br />
+              영양 가득 신선한 식재료로 만든 다양한 푸드를 소개합니다.
+            </p>
+          </div>
+          <form class="searchbox">
+            <input type="text" class="searchbox__input" placeholder="메뉴명을 입력하세요." />
+          </form>
+          <div class="menu__categories">
+            <button class="category__btn active" data-filter="all">전체 보기<span class="underline"></span></button>
+            <button class="category__btn" data-filter="promotion">프로모션</button>
+            <button class="category__btn" data-filter="beverage">음료</button>
+            <button class="category__btn" data-filter="dessert">디저트</button>
+          </div>
+          <div class="menu__container fixing">
+            <!-- Beverage -->
+            <article id="beverage" class="menu__article" data-type="beverage">
+              <h4 class="menu__type">음료</h4>
+              <ul class="menu__list">
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/americano.png" alt="아메리카노 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Americano">아메리카노</p>
+                  <span data-description="시원한 얼음물과 함께 스타벅스의 진하고 깔끔한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/latte.png" alt="카페 라떼 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Cafe Latte">카페 라떼</p>
+                  <span data-description="풍부하고 진한 에스프레소가 시원한 우유 만나, 고소함과 시원함을 함께 즐길 수 있는 대표적인 커피 라떼"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/dolce.png" alt="돌체 라떼 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Dolce Latte">돌체 라떼</p>
+                  <span data-description="깊은 커피의 맛과 향에 깔끔한 무지방 우유와 부드러운 돌체 시럽이 곁들어진, 달콤하고 진한 커피 라떼"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/mocha.png" alt="카페 모카 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Caffe Mocha">카페 모카</p>
+                  <span data-description="부드럽고 달콤한 휘핑 크림과 함께, 진한 초콜릿 모카 시럽과 풍부한 에스프레소 맛이 함께 어우러진 커피"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/milktea.png" alt="블랙 밀크티 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Black Milk Tea">블랙 밀크티</p>
+                  <span data-description="진한 홍차에 부드러운 우유와 연유 시럽으로 향긋하고달콤하게 맛을 내어, 호불호 갈리지 않는 블랙 밀크 티"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/malcha.png" alt="말차 라떼 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Malcha Latte">말차 라떼</p>
+                  <span data-description="차광 재배한 어린 녹찻잎을 곱게 갈아, 깊고 진한 말차 본연의 맛과 향을 부드럽게 즐길 수 있는 라떼"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/javachip.png" alt="초콜릿 자바칩 프라푸치노 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Chocolate Java Chip Frappuccino">초콜릿 자바칩 프라푸치노</p>
+                  <span data-description="커피와 모카 소스 위에 진한 초콜릿 자바칩이 입 안 가득 느껴지는 스타벅스에서만 맛볼 수 있는 프라푸치노"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/espressochip.png" alt="에스프레소칩 프라푸치노 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Espresso Chip Frappuccino">에스프레소칩 프라푸치노</p>
+                  <span data-description="리스트레토 에스프레소 2샷과 에스프레소 칩이 진하게 어우러진, 커피의 기본에 충실한 프라푸치노"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/malchacream.png" alt="말차 크림 프라푸치노 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Matcha Cream Frappuccino">말차 크림 프라푸치노</p>
+                  <span data-description="깊고 진한 말차 본연의 맛과 향을 부드러운 크림과 함께 시원하게 즐길 수 있어 더욱 맛있는 프라푸치노"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/strawberry.png" alt="딸기 요거트 블렌디드 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Strawberry Yogurt Blended">딸기 요거트 블렌디드</p>
+                  <span data-description="유산균이 살아있는 리얼 요거트와 풍성한 딸기 과육이 함께 어우러져 더욱 상큼한 과일 요거트 블렌디드"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/grapefruit.png" alt="자몽 허니 블랙티 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Grapefruit Honey Black Tea">자몽 허니 블랙티</p>
+                  <span data-description="새콤한 자몽과 달콤한 꿀이 함께 어우러져 깊고 그윽한 풍미가 느껴지는 스타벅스 티바나 블랙 티의 조화"></span>
+                </li>
+                <li class="menu__item" data-type="음료">
+                  <img src="img/menu/beverage/coldbrew.png" alt="콜드 브루 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Cold Brew">콜드 브루</p>
+                  <span data-description="전용 원두를 차가운 물로 추출하여, 바리스타의 정성과 깊은 풍미를 느낄 수 있는 스타벅스만의 콜드 브루"></span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- Dessert -->
+            <article id="dessert" class="menu__article" data-type="dessert">
+              <h4 class="menu__type">디저트</h4>
+              <ul class="menu__list">
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/bagel.jpeg" alt="토마토 크림치즈 베이글 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Tomato Cream Cheese Bagel" data-option="warm">토마토 크림치즈 베이글</p>
+                  <span data-description="바질, 썬드라이 토마토, 크림치즈의 조합이 이색적인 베이글로 크림치즈가 듬뿍 샌드되어 있습니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/chocolat.jpeg" alt="뺑 오 쇼콜라 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Pain au chocolat" data-option="warm">뺑 오 쇼콜라</p>
+                  <span data-description="겉은 바삭, 속은 부드러운 데니쉬 안에 초콜릿 필링을 넣어 담백하면서도 달콤한 맛이 느껴지는 빵입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/morning.jpeg" alt="연유 밀크모닝 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Sweet Milk Bread" data-option="warm">연유 밀크모닝</p>
+                  <span data-description="부드럽고 폭신한 질감의 빵 안에 연유 버터크림이 들어 있어, 따뜻하게 드시면 크림이 사르르 녹아듭니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/danish.jpeg" alt="티라미수 크림 데니쉬 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Tiramisu Cream Danish" data-option="warm">티라미수 크림 데니쉬</p>
+                  <span data-description="마스카포네 우유크림을 가득 품은 초콜릿 데니쉬에 커피 시럽, 코코아 파우더를 더한 디저트 브레드입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/cloud.jpeg" alt="클라우드 치즈 케이크 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Cloud Cheese Cake" data-option="warm">클라우드 치즈 케이크</p>
+                  <span data-description="샤워 크림의 상큼함과 진한 치즈의 맛을 동시에 맛 볼 수 있는 고급스러운 맛의 정석 치즈 케이크입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/ganache.jpeg" alt="레이어 가나슈 케이크 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Layer Ganache Cake" data-option="warm">레이어 가나슈 케이크</p>
+                  <span data-description="초콜릿, 가나슈, 모카로 만든 시트와 크림이 7개의 층을 이루어 모양부터 매력적인 케이크입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/tiramisu.jpg" alt="티라미수 케이크 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Tiramisu Cake" data-option="warm">티라미수 케이크</p>
+                  <span data-description="고소한 마스카포네 치즈 크림에 촉촉한 커피 시트가 입 안을 포근하게 감싸는 느낌의 티라미수입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/cookie.jpg" alt="쿠키 앤 크림 케이크 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Cookie and Cream Cake" data-option="warm">쿠키 앤 크림 케이크</p>
+                  <span data-description="진한 블랙 초콜릿 시트에 쿠키 마스카포네 크림을 층층이 쌓은 후, 그 위에 블랙 쿠키를 올린 케이크입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/burnt.jpeg" alt="번트 치즈 케이크 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Burnt Cheese Cake" data-option="warm">번트 치즈 케이크</p>
+                  <span data-description="크림 치즈가 듬뿍 들어간 케이크를 높은 온도로 짧은 시간 구워 낸 진한 맛의 치즈 케이크입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/castella.jpeg" alt="생크림 카스텔라 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Fresh Cream Castella" data-option="warm">생크림 카스텔라</p>
+                  <span data-description="부드러운 생크림이 듬뿍 들어있는 촉촉한 카스텔라로, 가장 인기가 많은 디저트 제품 중에 하나입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/sandwich.jpeg" alt="B.E.L.T 샌드위치 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="B.E.L.T. Sandwich" data-option="warm">B.E.L.T 샌드위치</p>
+                  <span data-description="재료 구성은 베이컨(Bacon), 계란(Egg), 로메인 상추(Lettuce-Romane), 토마토(Tomato) 입니다."></span>
+                </li>
+                <li class="menu__item" data-type="디저트">
+                  <img src="img/menu/dessert/muffin.jpeg" alt="잉글리쉬 머핀 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="English Muffin" data-option="warm">잉글리쉬 머핀</p>
+                  <span data-description="바쁜 아침, 간편하게 즐길 수 있는 잉글리쉬 머핀으로 소시지 패티, 달걀 후라이, 본가드 치즈가 들어갑니다."></span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- Promotion -->
+            <article id="promotion" class="menu__article" data-type="promotion">
+              <h4 class="menu__type">프로모션</h4>
+              <ul class="menu__list">
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/toffeenut.jpg" alt="토피넛 라떼 프로모션 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Toffee Nut Latte">토피넛 라떼</p>
+                  <span data-description="버터 향이 은은하게 느껴지는 토피와 고소한 견과류, 진한 에스프레소가 어우러진 크리스마스 시즌 음료"></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/aurora.jpeg" alt="오로라 캐모마일 릴렉서 프로모션 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Aurora Chamomile Tea Relaxer">오로라 캐모마일 릴렉서</p>
+                  <span data-description="달콤한 리치과육이 들어간 베이스에 은은한 캐모마일과 유스베리티가 조화롭게 어우러진 릴렉싱 티 음료"></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/tangerine.jpeg" alt="금귤 민트 티 프로모션 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Golden Tangerine Mint Tea">금귤 민트 티</p>
+                  <span data-description="상콤 달콤한 금귤, 한라봉, 감귤 등을 통째로 넣어 풍미를 살리고 민트의 깔끔함을 더한 티 음료"></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/scotch.jpeg" alt="크림 스카치 콜드 브루 프로모션 음료 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Cream Butter Scotch Cold Brew">크림 스카치 콜드 브루</p>
+                  <span data-description="고소한 오트 바닐라 크림이 카라멜과 스카치 풍미를 더한 콜드 브루에 올라가 부드럽고 은은한 맛의 음료"></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/velvet.jpeg" alt="산타 벨벳 치즈 케이크 프로모션 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Santa Velvet Cheese Cake" data-option="warm">산타 벨벳 치즈 케이크</p>
+                  <span data-description="레드 벨벳 시트 사이에 진한 풍미의 치즈 케이크를 샌드한 케이크로, 베어리스타의 산타를 형상화했습니다."></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/brownie.jpeg" alt="브라우니 치즈 케이크 프로모션 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Brownie Cheese Cake" data-option="warm">브라우니 치즈 케이크</p>
+                  <span data-description="초콜릿이 들어간 진한 브라우니 위에 치즈 케이크를 올린 후, 진한 가나슈를 더한 달콤한 케이크입니다."></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/sweetpotato.jpeg" alt="고구마 생크림 케이크 프로모션 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Sweet Potato Cream Cake" data-option="warm">고구마 생크림 케이크</p>
+                  <span data-description="부드러운 고구마 무스와 조각 형태의 고구마를 생크림과 함께 화이트 케이크 시트 사이에 듬뿍 넣었습니다."></span>
+                </li>
+                <li class="menu__item" data-type="프로모션">
+                  <img src="img/menu/promotion/baumkuchen.jpeg" alt="슈크림 바움쿠헨 프로모션 디저트 사진" class="menu__photo" />
+                  <p class="menu__name" data-name-en="Choux Cream Baumkuchen" data-option="warm">슈크림 바움쿠헨</p>
+                  <span data-description="바닐라 빈이 들어간 부드러운 슈크림과 바움쿠헨이 조화로운 바닐라 풍미의 케이크입니다."></span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Popup -->
+        <aside class="menu__popup">
+          <div class="popup__header">
+            <h4 class="popup__title">음료</h4>
+            <i class="popup__close-btn fa-solid fa-xmark"></i>
+          </div>
+          <div class="popup__main">
+            <img src="img/menu/beverage/americano.png" alt="아메리카노" class="popup__photo" />
+            <div class="popup__info">
+              <div class="popup__name">
+                <strong class="popup__name-kr">아메리카노</strong>
+                <p class="popup__name-en">Americano</p>
+              </div>
+              <i class="popup__heart fa-regular fa-heart">
+                <i class="popup__heart fa-solid fa-heart"></i>
+              </i>
+            </div>
+            <p class="popup__description">시원한 얼음물과 함께 스타벅스의 진하고 깔끔한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피</p>
+            <select class="popup__select">
+              <option value="Iced" selected>Iced</option>
+              <option value="Hot">Hot</option>
+            </select>
+            <div class="popup__btns">
+              <button class="btn__order">주문하기</button>
+              <button class="btn__cancel">취소</button>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <!-- Arrow up -->
+      <i class="btn__arrow-up fa-solid fa-arrow-up"></i>
+
+      <!-- Footer -->
+      <footer>
+        <img class="footer__logo" src="img/logo.png" alt="" />
+        <div class="footer__info">
+          <ul class="footer__terms">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">홈페이지 이용약관</a></li>
+            <li><a href="#">스타벅스 카드 이용약관</a></li>
+          </ul>
+          <address class="footer__address">
+            사업자등록번호 : 201-81-21515<br />
+            주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭<br />
+            TEL : 1522-3232<br />
+            개인정보 책임자 : 이현수
+          </address>
+          <p class="footer__reserve">ⓒ 2022 Starbucks Coffee Company - All Rights Reserved.</p>
+        </div>
+        <ul class="footer__sns">
+          <li class="sns">
+            <a href="https://www.instagram.com/starbuckskorea/?hl=ko"><img src="img/footer/instagram.png" alt="인스타그램" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://www.youtube.com/user/starbuckskorea"><img src="img/footer/youtube.png" alt="유튜브" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://ko-kr.facebook.com/starbuckskorea/"><img src="img/footer/facebook.png" alt="페이스북" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://twitter.com/StarbucksKorea"><img src="img/footer/twitter.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

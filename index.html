@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Starbucks Korea</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('service-worker.js')
+          .then(function (success) {
+            console.log('Service workers installation successful.');
+          })
+          .catch(function (error) {
+            console.log(`Service workers installation failed. \n${error}`);
+          });
+      }
+    </script>
+
+    <!-- Google font & Fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f506734a62.js"></script>
+
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Splitting & Scroll out -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.0/dist/splitting.css" />
+    <script defer src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+    <script defer src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- Stylesheet & Script -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="loading"></div>
+
+    <!-- Container -->
+    <div id="container">
+      <!-- Dark -->
+      <div class="dark"></div>
+
+      <!-- Sub header -->
+      <div class="sub-header" data-aos="fade-right" data-aos-delay="300">
+        <img class="sub-header__logo" src="img/logo_dark.png" alt="스타벅스 로고" />
+      </div>
+
+      <!-- Header -->
+      <header>
+        <a href="login.html"><i class="header__user fa-solid fa-user-large"></i></a>
+        <h1 class="header__logo"><a href="index.html">STARBUCKS</a></h1>
+        <i class="header__trigger fa-solid fa-bars"></i>
+      </header>
+
+      <!-- Navbar -->
+      <nav>
+        <i class="nav__close fa-solid fa-xmark"></i>
+        <ul class="navbar">
+          <li class="navbar__menu"><a class="navbar__menu__items" href="index.html">HOME</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="coffee.html">COFFEE</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="menu.html">MENU</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="rewards.html">REWARDS</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="card.html">CARD</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <main>
+        <!-- Home -->
+        <section id="home" data-aos="fade-down">
+          <div class="home__title">
+            <h2 id="slogan" class="home__title__slogan">BRIGHTEN YOUR<br />HOLIDAYS 🎄</h2>
+            <img class="home__title__photo" src="img/cup.png" alt="스타벅스 컵 이미지" />
+          </div>
+          <div class="home__categories">
+            <div class="home__categories__item" data-aos="fade-up" data-aos-delay="400">
+              <img src="img/home/beverage.png" alt="음료 아이콘" class="category__photo" />
+              <h3 class="category__name">음료</h3>
+              <a href="menu.html" class="categoty__link">보러 가기</a>
+            </div>
+            <div class="home__categories__item" data-aos="fade-up" data-aos-delay="600">
+              <img src="img/home/dessert.png" alt="디저트 아이콘" class="category__photo" />
+              <h3 class="category__name">디저트</h3>
+              <a href="menu.html" class="categoty__link">보러 가기</a>
+            </div>
+            <div class="home__categories__item" data-aos="fade-up" data-aos-delay="800">
+              <img src="img/home/promotion.png" alt="특별한 음식 아이콘" class="category__photo" />
+              <h3 class="category__name">프로모션</h3>
+              <a href="menu.html" class="categoty__link">보러 가기</a>
+            </div>
+            <div class="home__categories__item" data-aos="fade-up" data-aos-delay="1000">
+              <img src="img/home/card.png" alt="카드 아이콘" class="category__photo" />
+              <h3 class="category__name">카드</h3>
+              <a href="card.html" class="categoty__link">보러 가기</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coffee -->
+        <section id="coffee" data-scroll>
+          <h2 class="coffee__title" data-splitting>"커피 이상의 특별한 경험을 선사합니다."</h2>
+          <div class="coffee__introduce">
+            <strong class="coffee__sub-title">
+              스타벅스는 언제나 최고급 품질의<br />
+              커피만을 제공하기 위해 노력합니다.
+            </strong>
+            <p class="coffee__description">
+              스타벅스의 모든 커피가 최고의 품질 기준과<br />
+              윤리적 거래 및 친환경 방식에 의해 재배되는 것을<br />
+              궁극적인 목표로 삼고 있습니다.
+            </p>
+            <p class="coffee__description">
+              스타벅스의 커피 전문가들은 40년 이상 전통의 전문적인<br />
+              로스팅 기술을 통해 각각 원두의 고유한 풍미를 균형 있고<br />
+              풍부하게 끌어내고 있습니다.
+            </p>
+          </div>
+          <button class="btn__coffee">COFFEE 바로 가기</button>
+        </section>
+
+        <!-- Rewards -->
+        <section id="rewards" data-scroll>
+          <img class="rewards__logo" src="img/home/rewards/rewards_logo.png" alt="STARBUCKS REWARDS" />
+          <h2 class="rewards__title" data-splitting>
+            스타벅스만의 특별한 혜택,<br />
+            스타벅스 리워드
+          </h2>
+          <p class="rewards__description">
+            스타벅스를 사랑해 주시는 고객님들을 위해<br />
+            별★을 적립하여 혜택으로 돌려드리는 서비스입니다.<br />
+            등록된 스타벅스 카드를 매장에서 사용해보세요.<br />
+            스타벅스의 또 다른 즐거움을 느끼실 수 있습니다!
+          </p>
+          <div class="carousel" data-flickity>
+            <div class="carousel-cell">
+              <img class="benefits__item" src="img/home/rewards/rewards1.webp" alt="" />
+              <p class="carousel-cell-description">별★ 적립하고 무료 음료 및 디저트 받아가세요!</p>
+            </div>
+            <div class="carousel-cell">
+              <img class="benefits__item" src="img/home/rewards/rewards2.webp" alt="" />
+              <p class="carousel-cell-description">앱을 통해 미리 주문하고 빠르게 픽업해가세요!</p>
+            </div>
+            <div class="carousel-cell">
+              <img class="benefits__item" src="img/home/rewards/rewards3.webp" alt="" />
+              <p class="carousel-cell-description">소중한 당신의 생일, 무료 음료 쿠폰 발행!</p>
+            </div>
+            <div class="carousel-cell">
+              <img class="benefits__item" src="img/home/rewards/rewards4.webp" alt="" />
+              <p class="carousel-cell-description">리워드 회원을 대상으로 매번 다양한 이벤트 진행!</p>
+            </div>
+          </div>
+          <div class="rewards__btns">
+            <button class="btn__login"><a href="login.html">로그인</a></button>
+            <button class="btn__more"><a href="rewards.html">자세히 보기</a></button>
+          </div>
+        </section>
+
+        <!-- Order -->
+        <section id="order" data-scroll>
+          <h2 class="order__title" data-splitting>미리 주문하고 결제하세요!</h2>
+          <div class="order__way">
+            <div class="way" data-aos="flip-left">
+              <img src="img/home/order/order1.webp" alt="어플을 통해 주문하는 이미지" class="way__photo" />
+              <div class="way__title">
+                <h3>앱에서 주문</h3>
+                <p class="way__description">
+                  <span>Starbucks® Rewards</span> 가입하고<br />
+                  간편하게 모바일에서 주문하세요!<br />
+                  메뉴 준비 완료 시 알림 서비스를 제공해드리며,<br />
+                  커스텀 옵션을 나만의 메뉴로 저장할 수 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="way" data-aos="flip-right">
+              <img src="img/home/order/order2.webp" alt="배달 어플로 주문하는 이미지" class="way__photo" />
+              <div class="way__title">
+                <h3>배달 어플로 주문</h3>
+                <p class="way__description">
+                  스타벅스가 딜리버리 서비스를 시작했습니다!<br />
+                  어플을 통해 Starbucks® 배달을 주문하세요.<br />
+                  주변의 가까운 스타벅스 매장을 찾을 수 있습니다!
+                </p>
+              </div>
+            </div>
+            <div class="way" data-aos="flip-left">
+              <img src="img/home/order/order3.webp" alt="매장에서 픽업해가는 이미지" class="way__photo" />
+              <div class="way__title">
+                <h3>매장에서 픽업</h3>
+                <p class="way__description">
+                  앱에서 미리 결제하면 시간을 절약할 수 있습니다.<br />
+                  주문이 완료되면 매장 내 픽업대에서 기다려주세요.<br />
+                  준비가 끝나는 대로 불러드리겠습니다.
+                </p>
+              </div>
+            </div>
+            <div class="way" data-aos="flip-right">
+              <img src="img/home/order/order4.webp" alt="드라이브 쓰루 이미지" class="way__photo" />
+              <div class="way__title">
+                <h3>드라이브 쓰루 제공</h3>
+                <p class="way__description">
+                  운전하기 전, 차 안에서 편안하게 주문하세요.<br />
+                  앱에서 미리 주문할 수도 있습니다.<br />
+                  매장에 도착하면 픽업 버튼을 누르기만 하면 됩니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Store -->
+        <section id="store" data-scroll>
+          <div class="store__visit">
+            <strong class="store__title" data-splitting>
+              스타벅스를<br />
+              <span>가까이에서 경험</span>해보세요.<br />
+              고객님과 가장 가까이 있는 매장에<br />
+              방문해보세요!
+            </strong>
+            <img class="store__meeting" src="img/home/store/meet.webp" alt="카페 모임 일러스트 이미지" />
+          </div>
+          <div class="store__class" data-scroll>
+            <p class="store__class__list" data-splitting>
+              차별화된 커피 경험을 누릴 수 있는 <span class="store__class__name">리저브™ 매장</span><br />
+              다양한 방법으로 편리하게 즐길 수 있는 <span class="store__class__name">드라이브 스루 매장</span><br />
+              함께 해서 더 따뜻함을 느낄 수 있는 소통 공간 <span class="store__class__name">커뮤니티 매장</span>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Arrow up -->
+      <i class="btn__arrow-up fa-solid fa-arrow-up"></i>
+
+      <!-- Footer -->
+      <footer>
+        <img class="footer__logo" src="img/logo.png" alt="" />
+        <div class="footer__info">
+          <ul class="footer__terms">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">홈페이지 이용약관</a></li>
+            <li><a href="#">스타벅스 카드 이용약관</a></li>
+          </ul>
+          <address class="footer__address">
+            사업자등록번호 : 201-81-21515<br />
+            주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭<br />
+            TEL : 1522-3232<br />
+            개인정보 책임자 : 이현수
+          </address>
+          <p class="footer__reserve">ⓒ 2022 Starbucks Coffee Company - All Rights Reserved.</p>
+        </div>
+        <ul class="footer__sns">
+          <li class="sns">
+            <a href="https://www.instagram.com/starbuckskorea/?hl=ko"><img src="img/footer/instagram.png" alt="인스타그램" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://www.youtube.com/user/starbuckskorea"><img src="img/footer/youtube.png" alt="유튜브" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://ko-kr.facebook.com/starbuckskorea/"><img src="img/footer/facebook.png" alt="페이스북" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://twitter.com/StarbucksKorea"><img src="img/footer/twitter.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

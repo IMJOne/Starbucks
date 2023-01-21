@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 | Starbucks Korea</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+
+    <!-- Google font & Fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f506734a62.js"></script>
+
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+
+    <!-- Stylesheet & Script -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div id="container">
+      <!-- Dark -->
+      <div class="dark"></div>
+
+      <!-- Header -->
+      <header>
+        <i class="header__backward fa-solid fa-chevron-left"></i>
+        <h1 class="header__logo"><a href="index.html">STARBUCKS</a></h1>
+        <div class="header__icons">
+          <a href="login.html"><i class="header__user fa-solid fa-user-large"></i></a>
+          <i class="header__trigger fa-solid fa-bars"></i>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav>
+        <i class="nav__close fa-solid fa-xmark"></i>
+        <ul class="navbar">
+          <li class="navbar__menu"><a class="navbar__menu__items" href="index.html">HOME</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="coffee.html">COFFEE</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="menu.html">MENU</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="rewards.html">REWARDS</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="card.html">CARD</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sub header -->
+      <div class="sub-header">
+        <img class="sub-header__logo" src="img/logo_dark.png" alt="스타벅스 로고" />
+      </div>
+
+      <!-- Main -->
+      <main>
+        <section id="login" data-aos="fade-down">
+          <h2 class="login__title">로그인</h2>
+          <div class="login__logo">
+            <img src="img/logo.png" alt="스타벅스 로고 이미지" class="login__logo__photo" />
+            <h3 class="login__logo__brand">STARBUCKS</h3>
+          </div>
+          <div class="login__welcome">
+            <p class="welcome__message">WELCOME!</p>
+            <p class="welcome__message">스타벅스 코리아에 오신 것을 환영합니다.</p>
+          </div>
+          <form class="login__form">
+            <input type="text" id="id" placeholder="아이디를 입력해 주세요." />
+            <input type="password" id="pw" placeholder="비밀번호를 입력해 주세요." />
+            <button type="submit" class="btn__login">로그인</button>
+          </form>
+          <p class="login__notice">
+            * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험<br />
+            이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.
+          </p>
+        </section>
+      </main>
+
+      <!-- Arrow up -->
+      <i class="btn__arrow-up fa-solid fa-arrow-up"></i>
+
+      <!-- Footer -->
+      <footer>
+        <img class="footer__logo" src="img/logo.png" alt="" />
+        <div class="footer__info">
+          <ul class="footer__terms">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">홈페이지 이용약관</a></li>
+            <li><a href="#">스타벅스 카드 이용약관</a></li>
+          </ul>
+          <address class="footer__address">
+            사업자등록번호 : 201-81-21515<br />
+            주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭<br />
+            TEL : 1522-3232<br />
+            개인정보 책임자 : 이현수
+          </address>
+          <p class="footer__reserve">ⓒ 2022 Starbucks Coffee Company - All Rights Reserved.</p>
+        </div>
+        <ul class="footer__sns">
+          <li class="sns">
+            <a href="https://www.instagram.com/starbuckskorea/?hl=ko"><img src="img/footer/instagram.png" alt="인스타그램" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://www.youtube.com/user/starbuckskorea"><img src="img/footer/youtube.png" alt="유튜브" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://ko-kr.facebook.com/starbuckskorea/"><img src="img/footer/facebook.png" alt="페이스북" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://twitter.com/StarbucksKorea"><img src="img/footer/twitter.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

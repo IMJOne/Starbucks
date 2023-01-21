@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타벅스 리워드 | Starbucks Korea</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+
+    <!-- Google font & Fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f506734a62.js"></script>
+
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Stylesheet & Script -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div id="container">
+      <!-- Dark -->
+      <div class="dark"></div>
+
+      <!-- Header -->
+      <header>
+        <i class="header__backward fa-solid fa-chevron-left"></i>
+        <h1 class="header__logo"><a href="index.html">STARBUCKS</a></h1>
+        <div class="header__icons">
+          <a href="login.html"><i class="header__user fa-solid fa-user-large"></i></a>
+          <i class="header__trigger fa-solid fa-bars"></i>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav>
+        <i class="nav__close fa-solid fa-xmark"></i>
+        <ul class="navbar">
+          <li class="navbar__menu"><a class="navbar__menu__items" href="index.html">HOME</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="coffee.html">COFFEE</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="menu.html">MENU</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="rewards.html">REWARDS</a></li>
+          <li class="navbar__menu"><a class="navbar__menu__items" href="card.html">CARD</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sub header -->
+      <div class="sub-header">
+        <img class="sub-header__logo" src="img/logo_dark.png" alt="스타벅스 로고" />
+      </div>
+
+      <!-- Main -->
+      <main>
+        <section id="rewards">
+          <h2 data-aos="fade-down">STARBUCKS REWARDS</h2>
+          <article class="introduce" data-aos="fade-up">
+            <h3 class="introduce__title" data-aos="fade-up" data-aos-delay="500">
+              <span>스타벅스만의 특별한 혜택,</span><br />
+              스타벅스 리워드를 만나보세요.
+            </h3>
+            <p class="introduce__description" data-aos="fade-up" data-aos-delay="700">
+              스타벅스를 사랑해주시는 고객님을 위해<br />
+              별★을 적립하여 혜택으로 돌려드리는<br />
+              특별한 리워드 서비스입니다.
+            </p>
+          </article>
+
+          <article class="basic" data-aos="fade-up" data-aos-delay="900">
+            <div class="basic__title">
+              <h3>리워드 기본 혜택</h3>
+              <p class="basic__description">
+                Starbucks® Rewards 가입하고 간편한 주문 및<br />
+                무료 커피 등의 다양한 혜택을 만나보세요.
+              </p>
+            </div>
+            <ul class="basic__service">
+              <li class="service">
+                <img src="img/rewards/basic1.webp" alt="무료 음료 서비스 이미지" class="service__photo" />
+                <div class="service__detail">
+                  <h4>무료 혜택 제공</h4>
+                  <p class="service__description">
+                    무료 커피를 받을 수 있을 뿐만 아니라<br />
+                    생일 선물과 커피 및 차 리필을 기대하세요.
+                  </p>
+                </div>
+              </li>
+              <li class="service">
+                <img src="img/rewards/basic2.webp" alt="주문 및 선결제 서비스 사진" class="service__photo" />
+                <div class="service__detail">
+                  <h4>주문 및 선결제</h4>
+                  <p class="service__description">
+                    매장에서 빠르게 픽업만 해가세요!<br />
+                    주문, 결제 및 적립은 먼저 도와드릴게요.
+                  </p>
+                </div>
+              </li>
+              <li class="service">
+                <img src="img/rewards/basic3.webp" alt="빠른 이벤트 소식 서비스 사진" class="service__photo" />
+                <div class="service__detail">
+                  <h4>빠른 이벤트 소식</h4>
+                  <p class="service__description">
+                    보너스 스타 챌린지, 더블 스타 데이 등<br />
+                    이벤트를 통해 별을 더 빨리 획득하세요.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="star">
+            <div class="star__title">
+              <h3 data-aos="fade-up">등급별 혜택</h3>
+              <p data-aos="fade-up">
+                사용할 때 마다 따라오는 별 적립 서비스,<br />
+                쌓이는 별에 따라 레벨도 오르고, 혜택도 UP UP!<br />
+                각 레벨에 따른 혜택을 지금부터 알아보세요.
+              </p>
+              <div class="star__level">
+                <button class="level__btn active" data-filter="all">All <span>★</span><span class="underline"></span></button>
+                <button class="level__btn" data-filter="welcome">Welcome <span>★</span></button>
+                <button class="level__btn" data-filter="green">Green <span>★</span></button>
+                <button class="level__btn" data-filter="gold">Gold <span>★</span></button>
+              </div>
+            </div>
+            <div class="star__wrap">
+              <article class="star__benefits all" data-level="all">
+                <ul class="benefits__detail">
+                  <li class="benefits" data-aos="fade-up">
+                    <img src="img/rewards/all1.png" alt="Free Extra 무료 제공 혜택" class="benefits__icon" />
+                    <p class="benefits__description">
+                      스타벅스 카드로 구매 시,<br />
+                      Free Extra 1개 제공
+                    </p>
+                  </li>
+                  <li class="benefits" data-aos="fade-up">
+                    <div class="benefits__icon">
+                      <img src="img/rewards/all2.png" alt="BOGO e-쿠폰 발행 혜택" />
+                    </div>
+                    <p class="benefits__description">
+                      자동 충전 발생 시마다<br />
+                      익일 BOGO e-쿠폰 발행
+                    </p>
+                  </li>
+                  <li class="benefits" data-aos="fade-up">
+                    <div class="benefits__icon">
+                      <img src="img/rewards/all3.png" alt="분실 신고 시 잔액 보관 혜택" />
+                    </div>
+                    <p class="benefits__description">분실 신고 시 잔액 보호</p>
+                  </li>
+                </ul>
+                <div class="benefits__sticker" data-aos="fade-up">
+                  <img src="img/rewards/level_welcome.png" alt="welcome 등급 스티커 이미지" />
+                  <img src="img/rewards/level_green.png" alt="green 등급 스티커 이미지" />
+                  <img src="img/rewards/level_gold.png" alt="gold 등급 스티커 이미지" />
+                </div>
+                <p class="benefits__notice" data-aos="fade-up">
+                  - 스타벅스 리워드 회원이라면 누구나 받아볼 수 있는 혜택입니다.<br />
+                  - 카드 분실 시, 분실신고를 통해 잔액을 보호받을 수 있습니다.<br />
+                  - 잔액 이전 및 환불 신청을 통해 잔액을 돌려받으실 수 있습니다.
+                </p>
+              </article>
+              <article class="star__benefits welcome" data-level="welcome">
+                <ul class="benefits__detail">
+                  <li class="benefits">
+                    <img src="img/rewards/welcome.png" alt="Free Extra 무료 제공 혜택" class="benefits__icon" />
+                    <p class="benefits__description">
+                      신규 회원에게만 주어지는 혜택,<br />
+                      웰컴 첫 구매 무료 음료 쿠폰 발행!
+                    </p>
+                  </li>
+                </ul>
+                <div class="benefits__sticker">
+                  <img src="img/rewards/level_welcome.png" alt="welcome 등급 스티커 이미지" />
+                </div>
+                <p class="benefits__notice">
+                  - 신규 웰컴 회원에게만 최초 1회 발행되는 쿠폰입니다.<br />
+                  - Tall Size 음료로 교환 가능하며, 유효기간은 30일 입니다.<br />
+                  - 회원 탈퇴 후 재가입 시 재 발행되지 않습니다
+                </p>
+              </article>
+              <article class="star__benefits green" data-level="green">
+                <ul class="benefits__detail">
+                  <li class="benefits">
+                    <img src="img/rewards/green1.png" alt="생일 쿠폰 발행 혜택" class="benefits__icon" />
+                    <p class="benefits__description">생일 쿠폰 발행</p>
+                  </li>
+                  <li class="benefits">
+                    <img src="img/rewards/green2.png" alt="원두 구매 혜택" class="benefits__icon" />
+                    <p class="benefits__description">
+                      250g 이상 원두 구매 시,<br />
+                      아메리카노 Tall Size 쿠폰
+                    </p>
+                  </li>
+                  <li class="benefits">
+                    <img src="img/rewards/green3.png" alt="Beverage BOGO 쿠폰 발행 혜택" class="benefits__icon" />
+                    <p class="benefits__description">Beverage BOGO 쿠폰</p>
+                  </li>
+                </ul>
+                <div class="benefits__sticker">
+                  <img src="img/rewards/level_green.png" alt="green 등급 스티커 이미지" />
+                  <img src="img/rewards/level_gold.png" alt="gold 등급 스티커 이미지" />
+                </div>
+                <p class="benefits__notice">
+                  - 생일 쿠폰의 사용 기간은 2주이며, Tall Size 음료로 교환 가능합니다.<br />
+                  - 원두 구매 혜택은 12개입 VIA 구매 시에도 적용됩니다.<br />
+                  - BOGO 쿠폰은 신규 음료 출시 시, 같은 음료를 한 잔 더 드리는 쿠폰입니다.
+                </p>
+              </article>
+              <article class="star__benefits gold" data-level="gold">
+                <ul class="benefits__detail">
+                  <li class="benefits">
+                    <img src="img/rewards/gold1.png" alt="골드 회원 전용 e-Gold Card 발급 혜택" class="benefits__icon" />
+                    <p class="benefits__description">
+                      골드회원만의<br />
+                      e-Gold Card 발급!
+                    </p>
+                  </li>
+                  <li class="benefits">
+                    <img src="img/rewards/gold2.png" alt="Personalized Offer 쿠폰 발행 혜택" class="benefits__icon" />
+                    <p class="benefits__description">Personalized Offer 쿠폰</p>
+                  </li>
+                  <li class="benefits">
+                    <img src="img/rewards/gold3.png" alt="별 12개 무료 음료 쿠폰 발행 혜택" class="benefits__icon" />
+                    <p class="benefits__description">별 12개 무료 음료 쿠폰</p>
+                  </li>
+                </ul>
+                <div class="benefits__sticker">
+                  <img src="img/rewards/level_gold.png" alt="gold 등급 스티커 이미지" />
+                </div>
+                <p class="benefits__notice">
+                  - 골드카드의 재신청을 원하시는 경우 분실 신고 후 가능합니다.<br />
+                  - Offer 쿠폰은 이벤트 일정에 따라 발행 시기가 달라질 수 있습니다.<br />
+                  - 별★이 12개 모인 다음날 Free Tall Size 쿠폰이 발행됩니다.
+                </p>
+              </article>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- Arrow up -->
+      <i class="btn__arrow-up fa-solid fa-arrow-up"></i>
+
+      <!-- Footer -->
+      <footer>
+        <img class="footer__logo" src="img/logo.png" alt="" />
+        <div class="footer__info">
+          <ul class="footer__terms">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">홈페이지 이용약관</a></li>
+            <li><a href="#">스타벅스 카드 이용약관</a></li>
+          </ul>
+          <address class="footer__address">
+            사업자등록번호 : 201-81-21515<br />
+            주식회사 에스씨케이컴퍼니 대표이사 : 송 데이비드 호섭<br />
+            TEL : 1522-3232<br />
+            개인정보 책임자 : 이현수
+          </address>
+          <p class="footer__reserve">ⓒ 2022 Starbucks Coffee Company - All Rights Reserved.</p>
+        </div>
+        <ul class="footer__sns">
+          <li class="sns">
+            <a href="https://www.instagram.com/starbuckskorea/?hl=ko"><img src="img/footer/instagram.png" alt="인스타그램" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://www.youtube.com/user/starbuckskorea"><img src="img/footer/youtube.png" alt="유튜브" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://ko-kr.facebook.com/starbuckskorea/"><img src="img/footer/facebook.png" alt="페이스북" /></a>
+          </li>
+          <li class="sns">
+            <a href="https://twitter.com/StarbucksKorea"><img src="img/footer/twitter.png" alt="트위터" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
