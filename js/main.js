@@ -49,6 +49,15 @@ container.addEventListener('click', e => {
   }
 });
 
+// Show arrow up btn
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    arrowUpBtn.classList.add('show');
+  } else {
+    arrowUpBtn.classList.remove('show');
+  }
+});
+
 // Home rewards carousel
 const carousel = document.querySelector('.carousel');
 if (window.innerWidth > 600 && carousel) {
