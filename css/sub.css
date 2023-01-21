@@ -101,17 +101,19 @@ input::placeholder {
 .reserve__store {
   width: 90%;
   height: 60px;
-  border: 2px solid #222;
+  background: #111;
+  color: var(--color-white);
   border-radius: 4px;
-  color: #222;
   font-weight: 700;
   font-size: var(--font-micro);
   transition: all 300ms;
 }
 .reserve__store:hover {
-  background: var(--color-gray);
-  color: var(--color-light-white);
-  border: 2px solid var(--color-gray);
+  background: var(--color-dark-green);
+}
+.store__icon {
+  color: var(--color-green);
+  margin-right: 8px;
 }
 .store__map {
   position: fixed;
@@ -438,7 +440,7 @@ a[href^="https://maps.google.com/maps"]
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 80%;
   min-width: 300px;
   max-width: 400px;
   background-color: #fff;

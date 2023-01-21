@@ -4,7 +4,6 @@
 const loading = document.querySelector('.loading');
 window.addEventListener('load', () => {
   if (loading) {
-    document.body.style.overflow = 'hidden';
     setTimeout(() => {
       document.body.style.overflow = 'auto';
       loading.style.opacity = 0;
