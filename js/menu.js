@@ -108,3 +108,89 @@ searchInput.addEventListener('input', e => {
     }
   }
 });
+
+// Open menu popup
+const menuContainer = document.querySelector('.menu__container');
+const menuPopup = document.querySelector('.menu__popup');
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top',
+  showConfirmButton: false,
+  timer: 1600,
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown animate__faster',
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp animate__faster',
+  }, // Sweet alert
+});
+
+container.addEventListener('click', e => {
+  const target = e.target;
+  const menuPopupHeight = menuPopup.getBoundingClientRect().height;
+  const menuPopupTop = window.innerHeight / 2 - menuPopupHeight / 2;
+
+  if (target.className === 'menu__photo') {
+    menuPopup.style.top = `${menuPopupTop}px`;
+    dark.classList.add('open');
+
+    // 팝업창 세부 정보를 클릭한 메뉴의 정보들로 변경
+    let popupTitle = document.querySelector('.popup__title');
+    let popupPhoto = document.querySelector('.popup__photo');
+    let popupNameKr = document.querySelector('.popup__name-kr');
+    let popupNameEn = document.querySelector('.popup__name-en');
+    let popupDescription = document.querySelector('.popup__description');
+    let popupSelect = document.querySelector('.popup__select');
+
+    const popupName = target.nextElementSibling;
+    const menuType = target.parentNode.dataset.type;
+    const menuPhoto = target.getAttribute('src');
+    const menuDescription = target.nextElementSibling.nextElementSibling.dataset.description;
+    const menuOption = target.nextElementSibling.dataset.option;
+
+    popupTitle.innerText = menuType;
+    popupPhoto = popupPhoto.setAttribute('src', menuPhoto);
+    popupNameKr.innerText = popupName.innerText;
+    popupNameEn.innerText = popupName.dataset.nameEn;
+    popupDescription.innerText = menuDescription;
+
+    if (menuOption === 'warm') {
+      popupSelect.children[0].innerText = 'Warmed';
+      popupSelect.children[1].innerText = 'Not Warmed';
+    } else {
+      return;
+    }
+  }
+
+  // Close popup
+  else if (e.target === dark || e.target.className === 'btn__cancel' || e.target.classList.contains('popup__close-btn')) {
+    menuPopup.style.top = `100%`;
+    dark.classList.remove('open');
+  } else if (e.target.className === 'btn__order') {
+    Toast.fire({
+      icon: 'warning',
+      title: '로그인 후 이용 가능합니다.',
+      timer: 1200,
+      showClass: false,
+    });
+  } else {
+    return;
+  }
+});
+
+const popupHeart = document.querySelector('.popup__heart.fa-regular');
+popupHeart.addEventListener('click', e => {
+  e.currentTarget.firstElementChild.classList.toggle('filled');
+
+  if (e.currentTarget.firstElementChild.classList.contains('filled')) {
+    Toast.fire({
+      icon: 'success',
+      title: '나만의 메뉴에 추가되었습니다.',
+    });
+  } else {
+    Toast.fire({
+      icon: 'error',
+      title: '나만의 메뉴에서 삭제되었습니다.',
+    });
+  }
+});
