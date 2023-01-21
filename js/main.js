@@ -48,3 +48,9 @@ container.addEventListener('click', e => {
       return;
   }
 });
+
+// Home rewards carousel
+const carousel = document.querySelector('.carousel');
+if (window.innerWidth > 600 && carousel) {
+  carousel.setAttribute('data-flickity', '{ "wrapAround": true }');
+}
