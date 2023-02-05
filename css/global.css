@@ -1,52 +1,5 @@
 @charset "UTF-8";
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  cursor: default;
-  user-select: none;
-  font-family: 'Pretendard';
-  letter-spacing: -0.7px;
-  overflow: hidden;
-}
-i {
-  cursor: pointer;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #222;
-}
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #222;
-  letter-spacing: -0.7px;
-}
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-address {
-  font-style: normal;
-}
-input,
-select {
-  outline: none;
-  border: none;
-}
-input:focus::placeholder {
-  color: transparent;
-}
-
 /* Variable */
 :root {
   /* Color */
@@ -83,35 +36,52 @@ input:focus::placeholder {
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 300;
-  font-display: swap;
-  src: local('Pretendard Light'), url('../font/Pretendard-Light.woff2') format('woff2'), url('../font/Pretendard-Light.woff') format('woff');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 400;
-  font-display: swap;
-  src: local('Pretendard Regular'), url('../font/Pretendard-Regular.woff2') format('woff2'), url('../font/Pretendard-Regular.woff') format('woff');
+body {
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  user-select: none;
+  font-family: 'Pretendard Variable';
+  letter-spacing: -0.7px;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 500;
-  font-display: swap;
-  src: local('Pretendard Medium'), url('../font/Pretendard-Medium.woff2') format('woff2'), url('../font/Pretendard-Medium.woff') format('woff');
+i {
+  cursor: pointer;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  font-display: swap;
-  src: local('Pretendard SemiBold'), url('../font/Pretendard-SemiBold.woff') format('woff2'), url('../font/Pretendard-SemiBold.woff') format('woff');
+li {
+  list-style: none;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 700;
-  font-display: swap;
-  src: local('Pretendard Bold'), url('../font/Pretendard-Bold.woff2') format('woff2'), url('../font/Pretendard-Bold.woff') format('woff');
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #222;
+  letter-spacing: -0.7px;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+address {
+  font-style: normal;
+}
+input,
+select {
+  outline: none;
+  border: none;
+}
+input:focus::placeholder {
+  color: transparent;
 }
 
 /* Typography */
@@ -185,7 +155,7 @@ p {
 
 /* Container */
 #container {
-  max-width: 1024px;
+  max-width: 400px;
   min-width: 320px;
   margin: auto;
 }
@@ -268,10 +238,7 @@ nav.open {
   margin-bottom: 40px;
 }
 
-/* Main */
-.sub-header {
-  display: none;
-}
+/* Arrow up */
 .btn__arrow-up {
   position: fixed;
   z-index: 10;
@@ -349,4 +316,16 @@ footer a {
 .sns {
   width: 40px;
   height: 40px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-green);
+  border-radius: 16px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-green);
 }

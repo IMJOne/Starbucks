@@ -2,6 +2,7 @@
 
 /* Common */
 section {
+  background: white;
   padding: 32px 16px;
 }
 
@@ -20,7 +21,7 @@ section {
 /* Home */
 #home {
   position: relative;
-  background: url(../img/background.png) no-repeat center top / contain;
+  background: white url(../img/background.png) no-repeat center top / contain;
 }
 .home__title__slogan {
   position: relative;
@@ -55,7 +56,7 @@ section {
   width: 70%;
 }
 .category__name {
-  font-size: 5vw;
+  font-size: 20px;
   margin: 8px;
 }
 .home__categories__item:nth-child(1) {
@@ -83,9 +84,6 @@ section {
 .home__categories__item:nth-child(3) .categoty__link,
 .home__categories__item:nth-child(4) .categoty__link {
   color: #fff;
-}
-.categoty__link {
-  font-size: 4vw;
 }
 .btn__home {
   position: absolute;
@@ -216,7 +214,7 @@ section {
   justify-content: center;
 }
 .way__title {
-  padding: 10vw 0;
+  padding: 48px 0;
 }
 
 /* Store */
