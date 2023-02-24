@@ -37,7 +37,7 @@ PWA(Progressive Web Application)를 메인 컨셉으로 잡고 진행한 프로�
 
 ## 💻 소스 코드
 
-전체 코드 보러 가기 👉 [Notion](https://www.notion.so/imjone/Starbucks-68398a8c085f4045bc1da00a6173849e?pvs=4)
+전체 코드 보러 가기 👉 [Notion](https://imjone.notion.site/Starbucks-68398a8c085f4045bc1da00a6173849e)
 
 ### 📍 매니페스트 파일 세팅
 
